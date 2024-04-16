@@ -104,6 +104,9 @@ func main() {
 
 	arrayUserData = append(arrayUserData, userData)
 	fmt.Println(arrayUserData)
+	for _, bk := range arrayUserData {
+		fmt.Println(bk["name"])
+	}
 
 }
 
