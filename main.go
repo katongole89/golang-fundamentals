@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// var conferenceName = "Go conference"
@@ -39,11 +41,23 @@ func main() {
 	bookings[0] = "call me"
 
 	// better option is Slice - its an abstraction of an array
-	var testSlice = []string{}
+	// var testSlice = []string{}
+	testSlice := []string{}
 	testSlice = append(testSlice, "the string added")
 
 	fmt.Println(testSlice)
-
 	fmt.Println(bookings)
+
+	// Loop that never ends
+	// for {
+	// }
+
+	namesArray := []string{"rick", "durant", "lebron"}
+
+	// Underscores are called blank identifiers - we expect a value eg index but we are not using it
+	for _, name := range namesArray {
+		fmt.Printf("%v", name)
+
+	}
 
 }
