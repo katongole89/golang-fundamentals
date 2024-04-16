@@ -94,6 +94,17 @@ func main() {
 	daton := helper.ReturnArrayUsers(namesArray)
 	fmt.Println(daton)
 
+	var arrayUserData = make([]map[string]string, 0)
+	fmt.Println(arrayUserData)
+
+	var userData = make(map[string]string)
+	userData["name"] = "katongole"
+	userData["age"] = "24"
+	userData["email"] = "katon@gmail.com"
+
+	arrayUserData = append(arrayUserData, userData)
+	fmt.Println(arrayUserData)
+
 }
 
 func greetUsers(name string) {
