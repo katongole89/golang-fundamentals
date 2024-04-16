@@ -79,4 +79,14 @@ func main() {
 		fmt.Println("WE FAILED")
 	}
 
+	//Switch statement
+	switch conferenceName {
+	case "kendrick":
+		fmt.Println("WE FAILED")
+	case "Drake":
+		fmt.Println("WE FAILED")
+	default:
+		fmt.Println("J COLE")
+	}
+
 }
