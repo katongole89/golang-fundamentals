@@ -108,3 +108,4 @@ func returnArrayUsers(theData []string) []string {
 // func retMultipleVal(name string)(bool, bool, []string){
 // 	return val1, val2, val3
 // }
+// USING
