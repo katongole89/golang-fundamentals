@@ -90,7 +90,8 @@ func main() {
 	}
 
 	greetUsers(conferenceName)
-	returnArrayUsers(namesArray)
+	daton := returnArrayUsers(namesArray)
+	fmt.Println(daton)
 
 }
 
@@ -102,3 +103,8 @@ func greetUsers(name string) {
 func returnArrayUsers(theData []string) []string {
 	return theData
 }
+
+//function that returns multiple values
+// func retMultipleVal(name string)(bool, bool, []string){
+// 	return val1, val2, val3
+// }
