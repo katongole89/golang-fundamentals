@@ -68,6 +68,8 @@ func main() {
 	// IF statement
 	if len(namesArray) > 0 {
 		fmt.Println("WE ARE JUST WINNING")
+	} else if len(namesArray) > 2 {
+		fmt.Println("WE ALWAYS REACH HERE")
 	} else {
 		fmt.Println("WE FAILED")
 	}
