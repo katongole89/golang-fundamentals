@@ -52,12 +52,20 @@ func main() {
 	// for {
 	// }
 
-	namesArray := []string{"rick", "durant", "lebron"}
+	namesArray := []string{"rick", "durant", "lebron", "calton"}
 
 	// Underscores are called blank identifiers - we expect a value eg index but we are not using it
 	for _, name := range namesArray {
-		fmt.Printf("%v", name)
+		fmt.Println(name)
+		if name == "lebron" {
+			break
+		}
 
+	}
+
+	// IF statement
+	if len(namesArray) > 0 {
+		fmt.Println("WE ARE JUST WINNING")
 	}
 
 }
