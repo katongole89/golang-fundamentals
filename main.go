@@ -1,6 +1,7 @@
 package main
 
 import (
+	"booking-app/helper"
 	"fmt"
 )
 
@@ -90,7 +91,7 @@ func main() {
 	}
 
 	greetUsers(conferenceName)
-	daton := returnArrayUsers(namesArray)
+	daton := helper.ReturnArrayUsers(namesArray)
 	fmt.Println(daton)
 
 }
@@ -100,9 +101,9 @@ func greetUsers(name string) {
 }
 
 // Returning function
-func returnArrayUsers(theData []string) []string {
-	return theData
-}
+// func returnArrayUsers(theData []string) []string {
+// 	return theData
+// }
 
 //function that returns multiple values
 // func retMultipleVal(name string)(bool, bool, []string){
