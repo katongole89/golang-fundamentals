@@ -32,8 +32,18 @@ func main() {
 	fmt.Printf("%v .u have bought %v tickets", userName, userTickets)
 
 	// Arrays
-	var testArray [50]string
+	// var testArray [50]string --- Just defining
+	//empty array
 	var bookings = [50]string{}
+	// to add element
+	bookings[0] = "call me"
+
+	// better option is Slice - its an abstraction of an array
+	var testSlice = []string{}
+	testSlice = append(testSlice, "the string added")
+
+	fmt.Println(testSlice)
+
 	fmt.Println(bookings)
 
 }
