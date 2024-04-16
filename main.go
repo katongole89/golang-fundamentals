@@ -61,11 +61,15 @@ func main() {
 			break
 		}
 
+		// #use continue while in the for loop but u want to skip code
+
 	}
 
 	// IF statement
 	if len(namesArray) > 0 {
 		fmt.Println("WE ARE JUST WINNING")
+	} else {
+		fmt.Println("WE FAILED")
 	}
 
 }
