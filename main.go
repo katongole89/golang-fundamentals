@@ -89,4 +89,16 @@ func main() {
 		fmt.Println("J COLE")
 	}
 
+	greetUsers(conferenceName)
+	returnArrayUsers(namesArray)
+
+}
+
+func greetUsers(name string) {
+	fmt.Printf("Welcome %v", name)
+}
+
+// Returning function
+func returnArrayUsers(theData []string) []string {
+	return theData
 }
