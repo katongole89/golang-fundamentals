@@ -52,6 +52,11 @@ func main() {
 	// for {
 	// }
 
+	// Immitation of the while loop
+	// for x>2{
+
+	// }
+
 	namesArray := []string{"rick", "durant", "lebron", "calton"}
 
 	// Underscores are called blank identifiers - we expect a value eg index but we are not using it
