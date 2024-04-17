@@ -94,6 +94,7 @@ func main() {
 	daton := helper.ReturnArrayUsers(namesArray)
 	fmt.Println(daton)
 
+	// #MAPS in Golang
 	var arrayUserData = make([]map[string]string, 0)
 	fmt.Println(arrayUserData)
 
@@ -107,6 +108,30 @@ func main() {
 	for _, bk := range arrayUserData {
 		fmt.Println(bk["name"])
 	}
+	// --------------- end of maps -------------------
+
+	type AllUserData struct {
+		firstName string
+		lastName  string
+		email     string
+		age       uint
+	}
+
+	// using it
+	var myData = AllUserData{
+		firstName: "riley",
+		lastName:  "freeman",
+		email:     "kat@gmail.com",
+		age:       34,
+	}
+
+	// #access the data
+	fmt.Println(myData)
+	fmt.Println(myData.firstName)
+
+	// ---- saving a formatted string ------
+	theFormattedString := fmt.Sprintf("Hello %v", myData.firstName)
+	fmt.Println(theFormattedString)
 
 }
 
