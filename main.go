@@ -3,8 +3,11 @@ package main
 import (
 	"booking-app/helper"
 	"fmt"
+	"sync"
 	"time"
 )
+
+var wg = sync.WaitGroup{}
 
 func main() {
 	// var conferenceName = "Go conference"
@@ -136,9 +139,13 @@ func main() {
 
 	// ------------ Goroutine - cocurrency ----------------
 	// to make the program concurrent  - just add the go word infront of the function
+	// NOTE: create a wait group if u are using concurrency such that the application does not terminate or end
+	// before finishing what has been distributed to other threads
+	wg.Add(2)
+	go testConcurencyInGo()
 	go testConcurencyInGo()
 	fmt.Println("== EXECUTION OF CODE IS DONE =====")
-	testConcurencyInGoPart2()
+	wg.Wait()
 
 }
 
@@ -149,13 +156,14 @@ func greetUsers(name string) {
 func testConcurencyInGo() {
 	time.Sleep(10 * time.Second)
 	fmt.Println("=====WE SENT AN EMAIL AFTER 10 seconds PART ONE =============")
+	wg.Done()
 }
 
-func testConcurencyInGoPart2() {
-	time.Sleep(30 * time.Second)
-	fmt.Println("=====WE SENT AN EMAIL AFTER 30 seconds PART TWO =============")
+// func testConcurencyInGoPart2() {
+// 	time.Sleep(30 * time.Second)
+// 	fmt.Println("=====WE SENT AN EMAIL AFTER 30 seconds PART TWO =============")
 
-}
+// }
 
 // Returning function
 // func returnArrayUsers(theData []string) []string {
