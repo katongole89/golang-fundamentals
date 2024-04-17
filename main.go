@@ -3,6 +3,7 @@ package main
 import (
 	"booking-app/helper"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -133,10 +134,27 @@ func main() {
 	theFormattedString := fmt.Sprintf("Hello %v", myData.firstName)
 	fmt.Println(theFormattedString)
 
+	// ------------ Goroutine - cocurrency ----------------
+	// to make the program concurrent  - just add the go word infront of the function
+	go testConcurencyInGo()
+	fmt.Println("== EXECUTION OF CODE IS DONE =====")
+	testConcurencyInGoPart2()
+
 }
 
 func greetUsers(name string) {
 	fmt.Printf("Welcome %v", name)
+}
+
+func testConcurencyInGo() {
+	time.Sleep(10 * time.Second)
+	fmt.Println("=====WE SENT AN EMAIL AFTER 10 seconds PART ONE =============")
+}
+
+func testConcurencyInGoPart2() {
+	time.Sleep(30 * time.Second)
+	fmt.Println("=====WE SENT AN EMAIL AFTER 30 seconds PART TWO =============")
+
 }
 
 // Returning function
